@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load static%}
+{% block content %}
+
+
+
+    <div class="container my-5">
+      <div class="row">
+        {% if  posts %}
+        {% for post in  posts %}
+        <div class="col-md-4 border p-2 rounded text-center">
+          <div class="custom-box">
+            <img src="{{post.featured_image.url }}" alt="Sample Image" class="img-fluid ">
+            <h3>{{post.title}}</h3>
+            <p>{{post.desc}}</p>
+            <a href="#" class="btn btn-warning">More Details</a>
+
+          </div>
+        </div>
+        {% endfor %}
+        {% else %}
+        <div class="col-md-4">
+          <div class="custom-box">
+            <img src="https://via.placeholder.com/300" alt="Sample Image">
+            <h3>Title Here</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et augue ipsum. Nunc fringilla velit eget libero congue hendrerit.</p>
+          </div>
+        </div>
+      
+        <div class="col-md-4">
+          <div class="custom-box">
+            <img src="https://via.placeholder.com/300" alt="Sample Image">
+            <h3>Title Here</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et augue ipsum. Nunc fringilla velit eget libero congue hendrerit.</p>
+          </div>
+        </div>
+      
+        {% endif %}
+      </div>
+    </div>
+ 
+
+  
+
+  {% endblock  %}
+
+
+
+  

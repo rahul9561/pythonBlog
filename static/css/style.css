@@ -1,0 +1,20 @@
+.navbar {
+    background-color: #f8f9fa;
+  }
+  .navbar-brand img {
+    max-height: 40px; /* Adjust the logo height */
+  }
+  .dropdown-menu {
+    min-width: auto;
+  }
+  .custom-box {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  .custom-box img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
