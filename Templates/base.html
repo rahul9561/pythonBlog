@@ -36,19 +36,27 @@
              <button class="btn bg-primary text-white">Sign Up</button>
             </a>
           </li>
+          {% if user.is_authenticated %}
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'login'  %}">
-             <button class="btn bg-primary text-white">Login</button>
+            <a class="nav-link" href="{% url 'logout' %}">
+              <button class="btn bg-primary text-white">Logout</button>
             </a>
           </li>
+        {% else %}
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'dashboard'  %}">
-             <button class="btn bg-primary text-white">Dashboard</button>
+            <a class="nav-link" href="{% url 'login' %}">
+              <button class="btn bg-primary text-white">Login</button>
             </a>
           </li>
+       
+        
+          {% endif %}
          
         </ul>
         
+        <a class="nav-link" href="{% url 'dashboard' %}">
+          <button type="button" class="btn btn-danger" >Dashboard</button>
+        </a>
       </div>
     </div>
   </nav>
